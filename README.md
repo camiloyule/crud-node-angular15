@@ -14,8 +14,11 @@ A brief description of your project and its purpose.
 
 Provide step-by-step instructions on how to install and set up the project locally. This may include:
 
+located in TEST-CRUD
 run npm install
 (check if there are node_modules for backend(test-crud) and inside crud-front)
+if inside crud-front there is not node_modules, located in crud-front
+run npm install
 
 1. Prerequisites (Node.js, Angular CLI, etc.)
 2. Cloning the repository
@@ -24,8 +27,18 @@ run npm install
 
 ## Usage
 
-to run backent
+-to run backend run both lines, it will run on localhost:3000
+npm run build
+npm run start
 
+- to run front end, it will rurn on localhost:4200
+ng serve
+
+to test url front end
+http://localhost:4200/items
+
+to test backend
+http://localhost:3000/api-docs/
 
 ## Features
 
