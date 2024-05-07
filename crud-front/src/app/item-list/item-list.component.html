@@ -1,0 +1,75 @@
+<div class="container">
+    <h2>Item List</h2>
+    <div class="mb-3">
+      <h4>Create New Item</h4>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="newItem.name">
+      </div>
+      <div class="form-group">
+        <label for="text">Description</label>
+        <input type="text" class="form-control" id="desc" [(ngModel)]="newItem.desc">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" [(ngModel)]="newItem.price">
+      </div>
+      <div class="form-group">
+        <label for="qty">Qty</label>
+        <input type="number" class="form-control" id="qty" [(ngModel)]="newItem.qty">
+      </div>
+      <div class="form-group">
+        <label for="spec">Specification</label>
+        <input type="text" class="form-control" id="spec" [(ngModel)]="newItem.spec">
+      </div>
+      <button class="btn btn-primary" (click)="createItem()">Create Item</button>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Available qty</th>
+          <th>Price</th>
+          <th>Specific info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let item of items">
+          <td>{{ item.name }}</td>
+          <td>{{ item.desc }}</td>
+          <td>{{ item.qty }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.spec }}</td>
+          <td>
+            <button class="btn btn-primary">View</button>
+            <button class="btn btn-secondary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </td>
+        </tr> -->
+        <tr *ngFor="let item of items; let i = index">
+            <td>
+              <input type="text" class="form-control" [(ngModel)]="item.name">
+            </td>
+            <td>
+              <input type="text" class="form-control" [(ngModel)]="item.desc">
+            </td>
+            <td>
+              <input type="number" class="form-control" [(ngModel)]="item.price">
+            </td>
+            <td>
+              <input type="number" class="form-control" [(ngModel)]="item.qty">
+            </td>
+            <td>
+              <input type="text" class="form-control" [(ngModel)]="item.spec">
+            </td>
+            <td>
+              <button class="btn btn-primary" (click)="editItem(item)">Save</button>
+              <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
