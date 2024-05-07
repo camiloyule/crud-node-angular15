@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 const DB_NAME = 'for_crud';
 const DB_USER = 'maiadmin';
-const DB_PASSWORD = 'qwertyuiop0A!';
+const DB_PASSWORD = 'justchangedforsecurity';
 const DB_HOST = 'localhost';
 const DB_PORT = 3306; // Default MySQL port
 
