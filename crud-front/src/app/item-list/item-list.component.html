@@ -36,19 +36,18 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="let item of items">
+        <tr *ngFor="let item of items">
           <td>{{ item.name }}</td>
           <td>{{ item.desc }}</td>
           <td>{{ item.qty }}</td>
           <td>{{ item.price }}</td>
           <td>{{ item.spec }}</td>
           <td>
-            <button class="btn btn-primary">View</button>
-            <button class="btn btn-secondary">Edit</button>
-            <button class="btn btn-danger">Delete</button>
+            <a [routerLink]="['/items', item.id, 'edit']" class="btn btn-secondary">Edit</a>
+    <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
           </td>
-        </tr> -->
-        <tr *ngFor="let item of items; let i = index">
+        </tr>
+        <!-- <tr *ngFor="let item of items; let i = index">
             <td>
               <input type="text" class="form-control" [(ngModel)]="item.name">
             </td>
@@ -68,7 +67,7 @@
               <button class="btn btn-primary" (click)="editItem(item)">Save</button>
               <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
             </td>
-          </tr>
+          </tr> -->
       </tbody>
     </table>
   </div>

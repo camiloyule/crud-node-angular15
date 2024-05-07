@@ -11,11 +11,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ItemListComponent } from './item-list/item-list.component';
+import { ItemEditComponent}from './item-edit/item-edit.component'
 // import { UserDetailComponent } from './user-detail/user-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/items', pathMatch: 'full' },
   { path: 'items', component: ItemListComponent },
+  { path: 'items/:id/edit', component: ItemEditComponent },
+
   // { path: 'users/:id', component: UserDetailComponent }
 ];
 
